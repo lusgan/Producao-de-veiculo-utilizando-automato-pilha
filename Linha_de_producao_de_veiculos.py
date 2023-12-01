@@ -1,3 +1,28 @@
+class Fornecedora:
+    def __init__(self):
+        self.estoque = {
+            1: {"tipo": "pneus", "quantidade": 800},
+            2: {"tipo": "vidros_porta", "quantidade": 200},
+            3: {"tipo": "portas", "quantidade": 1000},
+            4: {"tipo": "chassi", "quantidade": 2000}
+        }
+
+    def enviar_pecas(self, tipo, quantidade):
+        if tipo in self.estoque and self.estoque[tipo]["quantidade"] >= quantidade:
+            self.estoque[tipo]["quantidade"] -= quantidade
+            return quantidade
+        else:
+            return 0
+
+    def to_string(self):
+        print("Restam na fornecedora:")
+        for elemento in self.estoque:
+            print(f"\t{self.estoque[elemento]["quantidade"]} {self.estoque[elemento]["tipo"]}")
+        print('\n')
+
+
+
+
 class Carro:
     #tipos = Sedan, hatch, SUV, minivan
     #modelo A = direcao eletrica + automatico + 4 portas + ar condicionado
@@ -30,18 +55,17 @@ class Carro:
             
     def to_string(self):
         return f"{self.tipo}, direcao {self.direcao}, {self.cambio}, {self.qtd_portas} portas, {self.ar}"
-        
-    
-    
+
+
+
 
 class LinhaProducao:
     def __init__(self):
         self.pilha_carros = []
-        self.estoque_estoque_de_pneus = 400
+        self.estoque_de_pneus = 400
         self.estoque_de_vidros_porta = 100
         self.estoque_portas = 500
         self.estoque_chassi = 1000
-        
 
     def produzir_carro(self, tipo, modelo):
         carro = Carro(tipo, modelo)
@@ -94,14 +118,24 @@ class LinhaProducao:
 
         return relatorio
 
+
+
+
 # Exemplo de uso
+dia = 0
+
 linha = LinhaProducao()
+fornecedora = Fornecedora()
+
+a = fornecedora.enviar_pecas(1, 10)
+print(a)
+fornecedora.to_string()
 
 # Simulação de produção de carros
 linha.produzir_carro("Sedan", "modelo A")
 linha.produzir_carro("SUV", "modelo B")
 linha.produzir_carro("Hatch", "modelo C")
 
-
 # Gerar relatório diário
 print(linha.relatorio_diario())
+dia += 1
