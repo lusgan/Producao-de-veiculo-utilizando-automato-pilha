@@ -1,3 +1,53 @@
+'''
+Final work of LFA
+
+Members:
+    Santiago Cardoso
+    Lucas Gabriel
+'''
+
+veiculos = [
+    """
+    ____/   ___
+   |_   \__'  _\\
+   `-(*)----(*)'
+    """,
+
+    """
+       ____
+    __/___/______
+   |_ \\__'   \\"_"\\
+   `())--,())'-,,'
+    """,
+
+    """
+        ____
+      _/____]__
+     |_v'_]"__"]
+     `UJ-uJ--uJ
+
+    """,
+
+    """
+        ____
+      _/____)__
+     |_v'_)"__")
+     `UJ-uJ--uJ
+    """,
+
+    """
+       _____
+      i_____i
+      ["___"]
+      |J---L|
+    """,
+
+    """
+      .(___).
+     (O\_!_/O)
+    """
+]
+
 class Fornecedora:
     def __init__(self):
         self.estoque = {
@@ -243,50 +293,9 @@ linha.produzir_carro("Fusca", "MODELO C")
 
 # Gerar relatório diário
 print(linha.relatorio_diario())
-dia += 1
 
-veiculos = [
-    """
-    ____/   ___
-   |_   \__'  _\\
-   `-(*)----(*)'
-    """,
-
-    """
-       ____
-    __/___/______
-   |_ \\__'   \\"_"\\
-   `())--,())'-,,'
-    """,
-
-    """
-        ____
-      _/____]__
-     |_v'_]"__"]
-     `UJ-uJ--uJ
-
-    """,
-
-    """
-        ____
-      _/____)__
-     |_v'_)"__")
-     `UJ-uJ--uJ
-    """,
-
-    """
-       _____
-      i_____i
-      ["___"]
-      |J---L|
-    """,
-
-    """
-      .(___).
-     (O\_!_/O)
-    """
-]
-
-for veiculo in veiculos:
+carros_finalizados = linha.get_carros_finalizados()
+for carros_finalizados in veiculos:
     print(veiculo)
 
+dia += 1
