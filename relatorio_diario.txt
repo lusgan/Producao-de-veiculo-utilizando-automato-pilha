@@ -1,0 +1,240 @@
+
+==============================================================
+Relatório Diário - Dia 0:
+==============================================================
+Carros Finalizados: 3
+Detalhes:
+
+Sedan:
+Sedan, direcao hidraulica, manual, 2 portas, ventilacao
+
+Hatch:
+Hatch, direcao eletrica, automatico, 4 portas, ar condicionado
+
+SUV:
+
+Minivan:
+Minivan, direcao eletrica, automatico, 4 portas, ar condicionado
+
+Carros em Produção: 7
+Detalhes:
+- Tipo: Hatch, Modelo: MODELO A - Em produção
+- Tipo: Sedan, Modelo: MODELO B - Em produção
+- Tipo: Sedan, Modelo: MODELO A - Em produção
+- Tipo: Sedan, Modelo: MODELO B - Em produção
+- Tipo: Fusca, Modelo: MODELO A - Em produção
+- Tipo: Hatch, Modelo: MODELO A - Em produção
+- Tipo: Sedan, Modelo: MODELO B - Em produção
+==============================================================
+
+==============================================================
+Relatório Diário - Dia 1:
+==============================================================
+Carros Finalizados: 3
+Detalhes:
+
+Sedan:
+Sedan, direcao hidraulica, manual, 2 portas, ventilacao
+
+Hatch:
+Hatch, direcao eletrica, automatico, 4 portas, ar condicionado
+
+SUV:
+
+Minivan:
+Minivan, direcao eletrica, automatico, 4 portas, ar condicionado
+
+Carros em Produção: 17
+Detalhes:
+- Tipo: Hatch, Modelo: MODELO A - Em produção
+- Tipo: Sedan, Modelo: MODELO B - Em produção
+- Tipo: Sedan, Modelo: MODELO A - Em produção
+- Tipo: Sedan, Modelo: MODELO B - Em produção
+- Tipo: Fusca, Modelo: MODELO A - Em produção
+- Tipo: Hatch, Modelo: MODELO A - Em produção
+- Tipo: Sedan, Modelo: MODELO B - Em produção
+- Tipo: Hatch, Modelo: MODELO B - Em produção
+- Tipo: Sedan, Modelo: MODELO D - Em produção
+- Tipo: Hatch, Modelo: MODELO B - Em produção
+- Tipo: Sedan, Modelo: MODELO D - Em produção
+- Tipo: SUV, Modelo: MODELO A - Em produção
+- Tipo: Hatch, Modelo: MODELO C - Em produção
+- Tipo: Fusca, Modelo: MODELO B - Em produção
+- Tipo: Sedan, Modelo: MODELO D - Em produção
+- Tipo: Minivan, Modelo: MODELO B - Em produção
+- Tipo: SUV, Modelo: MODELO B - Em produção
+==============================================================
+
+==============================================================
+Relatório Diário - Dia 2:
+==============================================================
+Carros Finalizados: 3
+Detalhes:
+
+Sedan:
+Sedan, direcao hidraulica, manual, 2 portas, ventilacao
+
+Hatch:
+Hatch, direcao eletrica, automatico, 4 portas, ar condicionado
+
+SUV:
+
+Minivan:
+Minivan, direcao eletrica, automatico, 4 portas, ar condicionado
+
+Carros em Produção: 27
+Detalhes:
+- Tipo: Hatch, Modelo: MODELO A - Em produção
+- Tipo: Sedan, Modelo: MODELO B - Em produção
+- Tipo: Sedan, Modelo: MODELO A - Em produção
+- Tipo: Sedan, Modelo: MODELO B - Em produção
+- Tipo: Fusca, Modelo: MODELO A - Em produção
+- Tipo: Hatch, Modelo: MODELO A - Em produção
+- Tipo: Sedan, Modelo: MODELO B - Em produção
+- Tipo: Hatch, Modelo: MODELO B - Em produção
+- Tipo: Sedan, Modelo: MODELO D - Em produção
+- Tipo: Hatch, Modelo: MODELO B - Em produção
+- Tipo: Sedan, Modelo: MODELO D - Em produção
+- Tipo: SUV, Modelo: MODELO A - Em produção
+- Tipo: Hatch, Modelo: MODELO C - Em produção
+- Tipo: Fusca, Modelo: MODELO B - Em produção
+- Tipo: Sedan, Modelo: MODELO D - Em produção
+- Tipo: Minivan, Modelo: MODELO B - Em produção
+- Tipo: SUV, Modelo: MODELO B - Em produção
+- Tipo: SUV, Modelo: MODELO B - Em produção
+- Tipo: Minivan, Modelo: MODELO A - Em produção
+- Tipo: SUV, Modelo: MODELO D - Em produção
+- Tipo: SUV, Modelo: MODELO D - Em produção
+- Tipo: SUV, Modelo: MODELO B - Em produção
+- Tipo: Sedan, Modelo: MODELO B - Em produção
+- Tipo: Fusca, Modelo: MODELO C - Em produção
+- Tipo: Minivan, Modelo: MODELO B - Em produção
+- Tipo: Minivan, Modelo: MODELO C - Em produção
+- Tipo: Hatch, Modelo: MODELO D - Em produção
+==============================================================
+
+==============================================================
+Relatório Diário - Dia 3:
+==============================================================
+Carros Finalizados: 3
+Detalhes:
+
+Sedan:
+Sedan, direcao hidraulica, manual, 2 portas, ventilacao
+
+Hatch:
+Hatch, direcao eletrica, automatico, 4 portas, ar condicionado
+
+SUV:
+
+Minivan:
+Minivan, direcao eletrica, automatico, 4 portas, ar condicionado
+
+Carros em Produção: 37
+Detalhes:
+- Tipo: Hatch, Modelo: MODELO A - Em produção
+- Tipo: Sedan, Modelo: MODELO B - Em produção
+- Tipo: Sedan, Modelo: MODELO A - Em produção
+- Tipo: Sedan, Modelo: MODELO B - Em produção
+- Tipo: Fusca, Modelo: MODELO A - Em produção
+- Tipo: Hatch, Modelo: MODELO A - Em produção
+- Tipo: Sedan, Modelo: MODELO B - Em produção
+- Tipo: Hatch, Modelo: MODELO B - Em produção
+- Tipo: Sedan, Modelo: MODELO D - Em produção
+- Tipo: Hatch, Modelo: MODELO B - Em produção
+- Tipo: Sedan, Modelo: MODELO D - Em produção
+- Tipo: SUV, Modelo: MODELO A - Em produção
+- Tipo: Hatch, Modelo: MODELO C - Em produção
+- Tipo: Fusca, Modelo: MODELO B - Em produção
+- Tipo: Sedan, Modelo: MODELO D - Em produção
+- Tipo: Minivan, Modelo: MODELO B - Em produção
+- Tipo: SUV, Modelo: MODELO B - Em produção
+- Tipo: SUV, Modelo: MODELO B - Em produção
+- Tipo: Minivan, Modelo: MODELO A - Em produção
+- Tipo: SUV, Modelo: MODELO D - Em produção
+- Tipo: SUV, Modelo: MODELO D - Em produção
+- Tipo: SUV, Modelo: MODELO B - Em produção
+- Tipo: Sedan, Modelo: MODELO B - Em produção
+- Tipo: Fusca, Modelo: MODELO C - Em produção
+- Tipo: Minivan, Modelo: MODELO B - Em produção
+- Tipo: Minivan, Modelo: MODELO C - Em produção
+- Tipo: Hatch, Modelo: MODELO D - Em produção
+- Tipo: Minivan, Modelo: MODELO C - Em produção
+- Tipo: SUV, Modelo: MODELO A - Em produção
+- Tipo: Minivan, Modelo: MODELO D - Em produção
+- Tipo: Sedan, Modelo: MODELO A - Em produção
+- Tipo: Minivan, Modelo: MODELO B - Em produção
+- Tipo: Sedan, Modelo: MODELO A - Em produção
+- Tipo: Sedan, Modelo: MODELO A - Em produção
+- Tipo: Fusca, Modelo: MODELO A - Em produção
+- Tipo: Fusca, Modelo: MODELO C - Em produção
+- Tipo: Sedan, Modelo: MODELO B - Em produção
+==============================================================
+
+==============================================================
+Relatório Diário - Dia 4:
+==============================================================
+Carros Finalizados: 3
+Detalhes:
+
+Sedan:
+Sedan, direcao hidraulica, manual, 2 portas, ventilacao
+
+Hatch:
+Hatch, direcao eletrica, automatico, 4 portas, ar condicionado
+
+SUV:
+
+Minivan:
+Minivan, direcao eletrica, automatico, 4 portas, ar condicionado
+
+Carros em Produção: 47
+Detalhes:
+- Tipo: Hatch, Modelo: MODELO A - Em produção
+- Tipo: Sedan, Modelo: MODELO B - Em produção
+- Tipo: Sedan, Modelo: MODELO A - Em produção
+- Tipo: Sedan, Modelo: MODELO B - Em produção
+- Tipo: Fusca, Modelo: MODELO A - Em produção
+- Tipo: Hatch, Modelo: MODELO A - Em produção
+- Tipo: Sedan, Modelo: MODELO B - Em produção
+- Tipo: Hatch, Modelo: MODELO B - Em produção
+- Tipo: Sedan, Modelo: MODELO D - Em produção
+- Tipo: Hatch, Modelo: MODELO B - Em produção
+- Tipo: Sedan, Modelo: MODELO D - Em produção
+- Tipo: SUV, Modelo: MODELO A - Em produção
+- Tipo: Hatch, Modelo: MODELO C - Em produção
+- Tipo: Fusca, Modelo: MODELO B - Em produção
+- Tipo: Sedan, Modelo: MODELO D - Em produção
+- Tipo: Minivan, Modelo: MODELO B - Em produção
+- Tipo: SUV, Modelo: MODELO B - Em produção
+- Tipo: SUV, Modelo: MODELO B - Em produção
+- Tipo: Minivan, Modelo: MODELO A - Em produção
+- Tipo: SUV, Modelo: MODELO D - Em produção
+- Tipo: SUV, Modelo: MODELO D - Em produção
+- Tipo: SUV, Modelo: MODELO B - Em produção
+- Tipo: Sedan, Modelo: MODELO B - Em produção
+- Tipo: Fusca, Modelo: MODELO C - Em produção
+- Tipo: Minivan, Modelo: MODELO B - Em produção
+- Tipo: Minivan, Modelo: MODELO C - Em produção
+- Tipo: Hatch, Modelo: MODELO D - Em produção
+- Tipo: Minivan, Modelo: MODELO C - Em produção
+- Tipo: SUV, Modelo: MODELO A - Em produção
+- Tipo: Minivan, Modelo: MODELO D - Em produção
+- Tipo: Sedan, Modelo: MODELO A - Em produção
+- Tipo: Minivan, Modelo: MODELO B - Em produção
+- Tipo: Sedan, Modelo: MODELO A - Em produção
+- Tipo: Sedan, Modelo: MODELO A - Em produção
+- Tipo: Fusca, Modelo: MODELO A - Em produção
+- Tipo: Fusca, Modelo: MODELO C - Em produção
+- Tipo: Sedan, Modelo: MODELO B - Em produção
+- Tipo: Sedan, Modelo: MODELO C - Em produção
+- Tipo: Fusca, Modelo: MODELO A - Em produção
+- Tipo: Fusca, Modelo: MODELO A - Em produção
+- Tipo: SUV, Modelo: MODELO A - Em produção
+- Tipo: Minivan, Modelo: MODELO A - Em produção
+- Tipo: Fusca, Modelo: MODELO C - Em produção
+- Tipo: Minivan, Modelo: MODELO D - Em produção
+- Tipo: Minivan, Modelo: MODELO D - Em produção
+- Tipo: Fusca, Modelo: MODELO D - Em produção
+- Tipo: SUV, Modelo: MODELO D - Em produção
+==============================================================
