@@ -6,6 +6,12 @@ Members:
     Lucas Gabriel
 '''
 
+# -*- coding: utf-8 -*-
+
+import os
+import random
+import sys
+
 veiculos = [
     """
     ____/   ___
@@ -131,14 +137,14 @@ class LinhaProducao:
         self.estoque_de_vidros = 1000
         self.estoque_portas = 500
         self.estoque_chassi = 1000
-        self.estoque_parafusos = 10000  # Um carro tem em média 1500 parafusos
+        self.estoque_parafusos = 10000 # Um carro tem em média 1500 parafusos
         self.estoque_ar_condicionado = 30
         self.estoque_tapetes = 400
         self.estoque_farois = 400
         self.retrovisor = 200
 
     def obter_valores(self):
-        atributos = vars(self)  # Obtém todos os atributos da instância
+        atributos = vars(self) # Obtém todos os atributos da instância
         valores = [atributos[attr] for attr in atributos if not attr.startswith('__') and not callable(getattr(self, attr))]
         return valores
 
@@ -209,16 +215,13 @@ class LinhaProducao:
         self.retrovisor -= 3
         self.estoque_parafusos -= 100
         
-        # implementar as transições de estado
-        # e manipulação da pilha para produzir o carro
+        # Implementar as transições de estado e manipulação da pilha para produzir o carro
 
         lista = self.obter_valores()
         print(f"\n\n{lista}\n\n")
         if -1 in lista:
             carro.completado = False
             self.corrigir_atributos()
-        
-
         else:
             carro.completado = True  # Simulação de finalização
 
@@ -236,8 +239,8 @@ class LinhaProducao:
         Minivan = [carro for carro in carros_finalizados if carro.tipo == "Minivan"]
         Fusca = [carro for carro in carros_finalizados if carro.tipo == "Fusca"]
         
-        relatorio = f"Relatório Diário:\n"
-        relatorio += "----------------------------------------\n"
+        relatorio = (f"\n==============================================================\nRelatório Diário - Dia {dia}:\n")
+        relatorio += "==============================================================\n"
         relatorio += f"Carros Finalizados: {len(carros_finalizados)}\n"
         relatorio += "Detalhes:\n\n"
         
@@ -262,7 +265,12 @@ class LinhaProducao:
         for carro in carros_em_producao:
             relatorio += f"- Tipo: {carro.tipo}, Modelo: {carro.modelo} - Em produção\n"
         
-        relatorio += "-----------------------------------------\n"
+        relatorio += "==============================================================\n"
+
+        # Save the daily report to a text file
+        file_name = "relatorio_diario.txt"
+        with open(file_name, "a", encoding="utf-8") as file:
+            file.write(relatorio)
 
         return relatorio
 
@@ -274,16 +282,35 @@ quantidade_carros = 10 # Número de carros que a fábrica deve montar
 linha = LinhaProducao()
 fornecedora = Fornecedora()
 
-'''
+dia = 0
+
+if os.path.exists("relatorio_diario.txt"): # Deleta o arquivo anterior do relatório diário, caso ele exista
+    os.remove("relatorio_diario.txt")
+
 # Simulação de produção de carros
-for dia in range(quantidade_dias_simulacao):
-    linha.produzir_carros_aleatorios(quantidade_carros) # defina quantos carros podem ser produzidos diariamente
+for _ in range(quantidade_dias_simulacao):
+    linha.produzir_carros_aleatorios_diarios(quantidade_carros) # defina quantos carros podem ser produzidos diariamente
 
     # Gerar relatório diário
-    print(f"\nRelatório Diário - Dia {dia + 1}:\n")
     print(linha.relatorio_diario())
-'''
 
+    print("Carros produzidos:")
+    num_carros_finalizados = linha.get_carros_finalizados()
+    for _ in num_carros_finalizados:
+        veiculo_aleatorio = random.choice(veiculos)
+        print(veiculo_aleatorio, end=" ")
+
+    input("\nAperte ENTER para passar o dia...")
+    os.system("cls")
+
+    dia += 1
+
+    if dia == quantidade_dias_simulacao:
+        print("Cronograma de montagens finalizado!\n")
+        input("Aperte ENTER para fechar a fábrica...")
+        os.system("cls")
+
+'''
 # Simulação de produção de carros
 linha.produzir_carro("Sedan", "MODELO A")
 linha.produzir_carro("SUV", "MODELO B")
@@ -293,9 +320,4 @@ linha.produzir_carro("Fusca", "MODELO C")
 
 # Gerar relatório diário
 print(linha.relatorio_diario())
-
-carros_finalizados = linha.get_carros_finalizados()
-for carros_finalizados in veiculos:
-    print(veiculo)
-
-dia += 1
+'''
