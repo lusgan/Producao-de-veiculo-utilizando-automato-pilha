@@ -65,7 +65,7 @@ class Fornecedora:
         self.estoque_pneus = 200
         self.estoque_latarias = 100
         self.estoque_bancos = 1123
-        self.estoque_motores = 1
+        self.estoque_motores = 19
         self.estoque_baterias = 20
         self.estoque_freios = 53
         self.estoque_suspensoes = 70
