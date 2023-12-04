@@ -8,7 +8,6 @@ Members:
 
 # -*- coding: utf-8 -*-
 
-import os
 import random
 
 veiculos = {
@@ -62,24 +61,24 @@ veiculos = {
 
 class Fornecedora:
     def __init__(self):
-        self.estoque_pneus = 200
-        self.estoque_latarias = 100
-        self.estoque_bancos = 1123
-        self.estoque_motores = 19
-        self.estoque_baterias = 20
-        self.estoque_freios = 53
-        self.estoque_suspensoes = 70
-        self.estoque_direcoes_eletricas = 20
-        self.estoque_direcoes_mecanicas = 36
-        self.estoque_direcoes_hidraulicas = 15
-        self.estoque_vidros = 3000
-        self.estoque_portas = 520
-        self.estoque_chassi = 802
-        self.estoque_ar_condicionado = 20
-        self.estoque_farois = 433
-        self.estoque_retrovisor = 100
-        self.estoque_cambio_manual = 99
-        self.estoque_cambio_automatico = 80
+        self.estoque_pneus = random.randint(50, 200)  # Randomly generate values for the stock
+        self.estoque_latarias = random.randint(20, 100)
+        self.estoque_bancos = random.randint(500, 1123)
+        self.estoque_motores = random.randint(5, 30)
+        self.estoque_baterias = random.randint(10, 20)
+        self.estoque_freios = random.randint(20, 53)
+        self.estoque_suspensoes = random.randint(35, 70)
+        self.estoque_direcoes_eletricas = random.randint(10, 20)
+        self.estoque_direcoes_mecanicas = random.randint(20, 36)
+        self.estoque_direcoes_hidraulicas = random.randint(5, 15)
+        self.estoque_vidros = random.randint(1500, 3000)
+        self.estoque_portas = random.randint(260, 520)
+        self.estoque_chassi = random.randint(400, 802)
+        self.estoque_ar_condicionado = random.randint(10, 20)
+        self.estoque_farois = random.randint(216, 433)
+        self.estoque_retrovisor = random.randint(50, 100)
+        self.estoque_cambio_manual = random.randint(49, 99)
+        self.estoque_cambio_automatico = random.randint(40, 80)
 
 
     def pedir_pecas(self, tipo, quantidade):
@@ -160,26 +159,30 @@ class LinhaProducao:
         self.pilha_carros_finalizados = []
         self.pilha_carros_em_producao = []
 
-        self.estoque_pneus = 400
-        self.estoque_latarias = 200
-        self.estoque_bancos = 3000
-        self.estoque_motores = 4
-        self.estoque_baterias = 300
-        self.estoque_freios = 500
-        self.estoque_suspensoes = 700
-        self.estoque_direcoes_eletricas = 20
-        self.estoque_direcoes_mecanicas = 20
-        self.estoque_direcoes_hidraulicas = 20
-        self.estoque_vidros = 1000
-        self.estoque_portas = 500
-        self.estoque_chassi = 1000
-        self.estoque_ar_condicionado = 30
-        self.estoque_farois = 400
-        self.estoque_retrovisor = 200
-        self.estoque_cambio_manual = 200
-        self.estoque_cambio_automatico = 200
+        self.estoque_pneus = random.randint(100, 500)
+        self.estoque_latarias = random.randint(50, 300)
+        self.estoque_bancos = random.randint(500, 3000)
+        self.estoque_motores = random.randint(25, 100)
+        self.estoque_baterias = random.randint(100, 500)
+        self.estoque_freios = random.randint(200, 1000)
+        self.estoque_suspensoes = random.randint(300, 1000)
+        self.estoque_direcoes_eletricas = random.randint(10, 50)
+        self.estoque_direcoes_mecanicas = random.randint(10, 50)
+        self.estoque_direcoes_hidraulicas = random.randint(10, 50)
+        self.estoque_vidros = random.randint(500, 1500)
+        self.estoque_portas = random.randint(250, 750)
+        self.estoque_chassi = random.randint(500, 1500)
+        self.estoque_ar_condicionado = random.randint(10, 50)
+        self.estoque_farois = random.randint(200, 800)
+        self.estoque_retrovisor = random.randint(100, 400)
+        self.estoque_cambio_manual = random.randint(100, 300)
+        self.estoque_cambio_automatico = random.randint(100, 300)
 
         self.dia = 1
+
+    
+    def to_string(self):
+        return f"==============================================================\nEstoque restante da linha de produção:\nPneus:{self.estoque_pneus}\nLatarias:{self.estoque_latarias}\nBancos:{self.estoque_bancos}\nMotores:{self.estoque_motores}\nBaterias:{self.estoque_baterias}\nFreios:{self.estoque_freios}\nSuspensoes{self.estoque_suspensoes}\nDireções elétricas:{self.estoque_direcoes_eletricas}\nDireções hidráulicas:{self.estoque_direcoes_hidraulicas}\nDireções mecânicas:{self.estoque_direcoes_mecanicas}\nVidros:{self.estoque_vidros}\nPortas:{self.estoque_portas}\nChassis:{self.estoque_chassi}\nAres condicionados:{self.estoque_ar_condicionado}\nFaróis:{self.estoque_farois}\nRetrovisores:{self.estoque_retrovisor}\nCâmbios manuais:{self.estoque_cambio_manual}\nCâmbios automáticos:{self.estoque_cambio_automatico}\n==============================================================\n"
 
 
     def produzir_carro(self, tipo, modelo):
@@ -194,8 +197,9 @@ class LinhaProducao:
 
 
     def executar_producao(self, carro, falha = False, local_de_falha = None):
+        erro = random.randint(1,100) #  Erro aleatório na máquina de produção
         
-        if(falha):
+        if(falha or erro == 34): #  De 0 a 100 se cair em 34 é considerado como erro da máquina, 1% de chance de ocorrer um erro
             carro.completado = False
             return
 
@@ -205,7 +209,7 @@ class LinhaProducao:
             carro.pecas_faltantes["chassi"] = 1
 
         #  Simulação das etapas de produção
-        if(self.estoque_chassi > 0):
+        elif(self.estoque_chassi > 0):
             self.estoque_chassi -= 1
             carro.chassi = 1
             
@@ -222,7 +226,7 @@ class LinhaProducao:
                 falha = True
                 carro.pecas_faltantes["pneus"] = 4 - carro.pneus 
         
-        if(self.estoque_pneus >= 4):
+        elif(self.estoque_pneus >= 4):
             self.estoque_pneus -= 4
             carro.pneus = 4
 
@@ -231,7 +235,7 @@ class LinhaProducao:
             falha = True
             carro.pecas_faltantes["motor"] = 1    
 
-        if(self.estoque_motores > 0):
+        elif(self.estoque_motores > 0):
             self.estoque_motores -= 1
             carro.motor = 1
             
@@ -241,7 +245,7 @@ class LinhaProducao:
             falha = True
             carro.pecas_faltantes["bateria"] = 1
 
-        if(self.estoque_baterias > 0):
+        elif(self.estoque_baterias > 0):
             self.estoque_baterias -= 1
             carro.bateria = 1
         
@@ -257,7 +261,7 @@ class LinhaProducao:
                 falha = True
                 carro.pecas_faltantes["freio"] = 4 - carro.freios
         
-        if(self.estoque_freios >= 4):
+        elif(self.estoque_freios >= 4):
             self.estoque_freios -= 4
             carro.freios = 4
 
@@ -273,7 +277,7 @@ class LinhaProducao:
                 falha = True
                 carro.pecas_faltantes["suspensoes"] = 4 - carro.suspensoes
         
-        if(self.estoque_suspensoes >= 4):
+        elif(self.estoque_suspensoes >= 4):
             self.estoque_suspensoes -= 4
             carro.suspensoes = 4
 
@@ -289,7 +293,7 @@ class LinhaProducao:
                 falha = True
                 carro.pecas_faltantes["bancos"] = 5 - carro.bancos
         
-        if(self.estoque_bancos >= 5):
+        elif(self.estoque_bancos >= 5):
             self.estoque_bancos -= 5
             carro.bancos = 5
 
@@ -298,7 +302,7 @@ class LinhaProducao:
             falha = True
             carro.pecas_faltantes["lataria"] = 1
 
-        if(self.estoque_latarias > 0):
+        elif(self.estoque_latarias > 0):
             self.estoque_latarias -= 1
             carro.lataria = 1
             
@@ -314,7 +318,7 @@ class LinhaProducao:
                 falha = True
                 carro.pecas_faltantes["farois"] = 4 - carro.farois
         
-        if(self.estoque_farois >= 4):
+        elif(self.estoque_farois >= 4):
             self.estoque_farois -= 4
             carro.farois = 4
 
@@ -330,7 +334,7 @@ class LinhaProducao:
                 falha = True
                 carro.pecas_faltantes["retrovisores"] = 3 - carro.retrovisores
         
-        if(self.estoque_retrovisor >= 3):
+        elif(self.estoque_retrovisor >= 3):
             self.estoque_retrovisor -= 3
             carro.retrovisores = 3 
                 
@@ -343,7 +347,7 @@ class LinhaProducao:
                 falha = True
                 carro.pecas_faltantes["direcao_eletrica"] = 1
 
-            if(self.estoque_direcoes_eletricas>0):
+            elif(self.estoque_direcoes_eletricas>0):
                 self.estoque_direcoes_eletricas -= 1
                 carro.direcao_tipo = 1
 
@@ -359,7 +363,7 @@ class LinhaProducao:
                     falha = True
                     carro.pecas_faltantes["portas"] = 4 - carro.portas
         
-            if(self.estoque_portas >= 4):
+            elif(self.estoque_portas >= 4):
                 self.estoque_portas -= 4
                 carro.portas = 4
 
@@ -375,7 +379,7 @@ class LinhaProducao:
                     falha = True
                     carro.pecas_faltantes["vidros"] = 6 - carro.vidros
         
-            if(self.estoque_vidros >= 6):
+            elif(self.estoque_vidros >= 6):
                 self.estoque_vidros -= 6
                 carro.vidros = 6
                 
@@ -384,7 +388,7 @@ class LinhaProducao:
                 falha = True
                 carro.pecas_faltantes["cambio_automatico"] = 1
 
-            if(self.estoque_cambio_automatico>0):    
+            elif(self.estoque_cambio_automatico>0):    
                 self.estoque_cambio_automatico -= 1
                 carro.cambio = 1
             
@@ -393,7 +397,7 @@ class LinhaProducao:
                 falha = True
                 carro.pecas_faltantes["ar_condicionado"] = 1
 
-            if(self.estoque_ar_condicionado>0):    
+            elif(self.estoque_ar_condicionado>0):    
                 self.estoque_ar_condicionado -= 1
                 carro.ar_condicionado = 1
             
@@ -405,7 +409,7 @@ class LinhaProducao:
                 falha = True
                 carro.pecas_faltantes["direcao_eletrica"] = 1
 
-            if(self.estoque_direcoes_eletricas>0):
+            elif(self.estoque_direcoes_eletricas>0):
                 self.estoque_direcoes_eletricas -= 1
                 carro.direcao_tipo = 1
             
@@ -421,7 +425,7 @@ class LinhaProducao:
                     falha = True
                     carro.pecas_faltantes["portas"] = 4 - carro.portas
         
-            if(self.estoque_portas >= 4):
+            elif(self.estoque_portas >= 4):
                 self.estoque_portas -= 4
                 carro.portas = 4
 
@@ -437,7 +441,7 @@ class LinhaProducao:
                     falha = True
                     carro.pecas_faltantes["vidros"] = 6 - carro.vidros
         
-            if(self.estoque_vidros >= 6):
+            elif(self.estoque_vidros >= 6):
                 self.estoque_vidros -= 6
                 carro.vidros = 6
 
@@ -446,7 +450,7 @@ class LinhaProducao:
                 falha = True
                 carro.pecas_faltantes["cambio_manual"] = 1
 
-            if(self.estoque_cambio_manual>0):    
+            elif(self.estoque_cambio_manual>0):    
                 self.estoque_cambio_manual -= 1
                 carro.cambio = 1
 
@@ -455,7 +459,7 @@ class LinhaProducao:
                 falha = True
                 carro.pecas_faltantes["ar_condicionado"] = 1
 
-            if(self.estoque_ar_condicionado>0):    
+            elif(self.estoque_ar_condicionado>0):    
                 self.estoque_ar_condicionado -= 1
                 carro.ar_condicionado = 1
 
@@ -467,7 +471,7 @@ class LinhaProducao:
                 falha = True
                 carro.pecas_faltantes["direcao_hidraulica"] = 1
 
-            if(self.estoque_direcoes_hidraulicas>0):
+            elif(self.estoque_direcoes_hidraulicas>0):
                 self.estoque_direcoes_hidraulicas -= 1
                 carro.direcao_tipo = 1
             
@@ -483,7 +487,7 @@ class LinhaProducao:
                     self.estoque_portas = 0
                     carro.pecas_faltantes["portas"] = 2 - carro.portas
         
-            if(self.estoque_portas >= 2):
+            elif(self.estoque_portas >= 2):
                 self.estoque_portas -= 2
                 carro.portas = 2
             
@@ -499,7 +503,7 @@ class LinhaProducao:
                     falha = True
                     carro.pecas_faltantes["vidros"] = 4 - carro.vidros
         
-            if(self.estoque_vidros >= 4):
+            elif(self.estoque_vidros >= 4):
                 self.estoque_vidros -= 6
                 carro.vidros = 4
 
@@ -508,7 +512,7 @@ class LinhaProducao:
                 falha = True
                 carro.pecas_faltantes["cambio_manual"] = 1
 
-            if(self.estoque_cambio_manual>0):    
+            elif(self.estoque_cambio_manual>0):    
                 self.estoque_cambio_manual -= 1
                 carro.cambio = 1
 
@@ -520,7 +524,7 @@ class LinhaProducao:
                 falha = True
                 carro.pecas_faltantes["direcao_mecanica"] = 1
 
-            if(self.estoque_direcoes_mecanicas>0):
+            elif(self.estoque_direcoes_mecanicas>0):
                 self.estoque_direcoes_mecanicas -= 1
                 carro.direcao_tipo = 1
 
@@ -536,7 +540,7 @@ class LinhaProducao:
                     falha = True
                     carro.pecas_faltantes["portas"] = 4 - carro.portas
 
-            if(self.estoque_portas >= 4):
+            elif(self.estoque_portas >= 4):
                 self.estoque_portas -= 4
                 carro.portas = 4
 
@@ -552,7 +556,7 @@ class LinhaProducao:
                     falha = True
                     carro.pecas_faltantes["vidros"] = 6 - carro.vidros
         
-            if(self.estoque_vidros >= 6):
+            elif(self.estoque_vidros >= 6):
                 self.estoque_vidros -= 6
                 carro.vidros = 6
 
@@ -561,7 +565,7 @@ class LinhaProducao:
                 falha = True
                 carro.pecas_faltantes["cambio_manual"] = 1
 
-            if(self.estoque_cambio_manual>0):    
+            elif(self.estoque_cambio_manual>0):    
                 self.estoque_cambio_manual -= 1
                 carro.cambio = 1
 
@@ -661,6 +665,8 @@ class LinhaProducao:
 
         print(relatorio)
 
+        print(self.to_string())
+        print("==============================================================\n")
         print(self.fornecedora.to_string())
 
         while self.pilha_carros_finalizados:
@@ -668,54 +674,3 @@ class LinhaProducao:
             print(veiculos[carro.tipo])
         
         self.dia += 1
-
-
-''' _.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~._ '''
-#  Inicialização do simulador, defina os seguintes critérios:
-quantidade_dias_simulacao = 4 #  Número de dias que a simulação leva
-quantidade_carros = 5 #  Número de carros limite que a fábrica consegue produzir
-''' _.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~._ '''
-
-linha = LinhaProducao()
-
-#  Pilha de dias
-pilha_dias = ["D"] * quantidade_dias_simulacao
-
-if os.path.exists("relatorio_diario.txt"): #  Deleta o arquivo anterior do relatório diário, caso ele exista
-    os.remove("relatorio_diario.txt")
-
-#  Simulação de produção de carros
-while pilha_dias:
-    #  Desempilhar um "D" para representar o dia que passa
-    pilha_dias.pop()
-
-    tipos_carros = ["Sedan", "SUV", "Hatch", "Minivan", "Fusca"]
-    modelos = ["MODELO A", "MODELO B", "MODELO C", "MODELO D"]
-
-    fita = []
-    #  fita.append(linha.pilha_carros_em_producao)
-
-    for _ in range(quantidade_carros):
-        tipo_carro_aleatorio = random.choice(tipos_carros)
-        modelo_aleatorio = random.choice(modelos)
-        fita.append([tipo_carro_aleatorio, modelo_aleatorio])
-
-    for element in fita:
-        linha.produzir_carro(element[0], element[1])
-    
-    #  Gerar relatório diário
-    linha.relatorio_diario()
-
-    input("\nAperte ENTER para passar o dia...")
-    os.system("cls")
-
-    if not pilha_dias:
-        print("Cronograma de montagens finalizado!\n")
-
-        if (not linha.pilha_carros_em_producao):
-            print("Fábrica conseguiu realizar todo o processo de montagem!")
-        else:
-            print("Fábrica não conseguiu atingir a cota de veículos montados nos dias!")
-
-        input("Aperte ENTER para fechar a fábrica...")
-        os.system("cls")
